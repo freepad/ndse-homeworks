@@ -1,0 +1,21 @@
+{
+  "name": "ndse-homeworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "date": "node src/cli/date.mjs",
+    "game": "node src/cli/game.mjs",
+    "lint": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Damir Rysaev <freepad@ya.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}
