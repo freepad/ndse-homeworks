@@ -8,12 +8,14 @@
     "date": "node src/cli/date.mjs",
     "game": "node src/cli/game.mjs",
     "headsOrTails": "node src/cli/headsOrTails.mjs",
+    "weather": "node src/cli/weather.mjs",
     "lint": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Damir Rysaev <freepad@ya.ru>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
