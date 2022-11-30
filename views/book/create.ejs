@@ -1,0 +1,21 @@
+<%- include('../layouts/layoutStart.ejs') %>
+<form action="/api/books" method="post">
+    <h2>Создать книгу</h2>
+    <p>
+        <input type="text" placeholder="Название" name="title" value="Пример названия" />
+    </p>
+    <p>
+        <textarea placeholder="Описание" name="description">Сервитут отражает гносеологический договор, даже с учетом публичного характера данных правоотношений. </textarea>
+    </p>
+    <p>
+        <input type="text" placeholder="Авторы" name="authors" value="Студенты OTUS" />
+    </p>
+    <p>
+        <input type="file" placeholder="Обложка" name="fileCover" />
+    </p>
+    <p>
+        <input type="file" placeholder="Книга" name="fileBook" />
+    </p>
+    <button>Создать</button>
+</form>
+<%- include('../layouts/layoutEnd.ejs') %>

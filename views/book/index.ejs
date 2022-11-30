@@ -1,0 +1,11 @@
+<%- include('../layouts/layoutStart.ejs') %>
+<ul>
+    <ol>
+        <% for (const book of books) { %>
+            <li>
+                <a href="/books/<%= book.id %>"><%= book.title %></a>
+            </li>
+        <% } %>
+    </ol>
+</ul>
+<%- include('../layouts/layoutEnd.ejs') %>
