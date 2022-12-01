@@ -1,0 +1,26 @@
+<%- include('../layouts/layoutStart.ejs') %>
+<form action="/api/books/<%= book.id %>" method="POST">
+    <input type="hidden" name="_method" value="put" />
+    <input type="hidden" name="id" value="<%= book.id %>" />
+
+    <h3>Просмотр книги</h3>
+    <p>
+        <input type="text" placeholder="Название" name="title" value="<%= book.title %>" />
+    </p>
+    <p>
+        <textarea placeholder="Описание" name="description"><%= book.description %></textarea>
+    </p>
+    <p>
+        <input type="text" placeholder="Авторы" name="authors" value="<%= book.authors %>" />
+    </p>
+    <p>
+        <span>Обложка: <%= book.fileCover %></span><br>
+        <input type="file" placeholder="Обложка" name="fileCover" />
+    </p>
+    <p>
+        <span>Книга: <%= book.fileBook %></span><br>
+        <input type="file" placeholder="Книга" name="fileBook" />
+    </p>
+    <button>Обновить</button>
+</form>
+<%- include('../layouts/layoutEnd.ejs') %>
