@@ -29,14 +29,17 @@ router.post('/api/books/', upload.single('fileBook'), (req, res) => {
 })
 
 router.put('/api/books/:id', upload.single('fileBook'), (req, res) => {
+  console.log('update book')
   const { id } = req.params
   if (bookRepository.has(id)) {
-    const book = new Book({
+    const book = bookRepository.getById(id)
+    const updatedBook = bookRepository.update({
+      ...book,
       ...req.body,
+      id,
       file: req.file
     })
-    bookRepository.update(book)
-    res.json(book)
+    res.json(updatedBook)
   } else {
     res.status(404)
     res.json({ status: 404, message: '404 | страница не найдена' })

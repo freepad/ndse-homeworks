@@ -2,24 +2,24 @@
 <form action="/api/books" method="post">
     <h3>Просмотр книги</h3>
     <p>
-        <input type="hidden" name="id" value="<%= book.id %>" />
+        <input type="hidden" name="id" value="<%= book.id %>" readonly />
     </p>
     <p>
-        <input type="text" placeholder="Название" name="title" value="<%= book.title %>" />
+        <input type="text" placeholder="Название" name="title" value="<%= book.title %>" readonly />
     </p>
     <p>
-        <textarea placeholder="Описание" name="description"><%= book.description %></textarea>
+        <textarea placeholder="Описание" name="description" readonly><%= book.description %></textarea>
     </p>
     <p>
-        <input type="text" placeholder="Авторы" name="authors" value="<%= book.authors %>" />
+        <input type="text" placeholder="Авторы" name="authors" value="<%= book.authors %>" readonly />
     </p>
     <p>
         <span>Обложка: <%= book.fileCover %></span><br>
-        <input type="file" placeholder="Обложка" name="fileCover" />
+        <input type="file" placeholder="Обложка" name="fileCover" readonly />
     </p>
     <p>
         <span>Книга: <%= book.fileBook %></span><br>
-        <input type="file" placeholder="Книга" name="fileBook" />
+        <input type="file" placeholder="Книга" name="fileBook" readonly />
     </p>
 </form>
 <a href="/books/update/<%= book.id %>">Изменить</a>

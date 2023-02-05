@@ -1,10 +1,12 @@
 const express = require('express')
+const methodOverride = require('method-override')
 const { router: bookController } = require('./book/book')
 const { router: userController } = require('./user/user')
 const app = express()
 const port = 3000
 
 app.use(express.urlencoded())
+app.use(methodOverride('_method'))
 app.set('view engine', 'ejs')
 
 app.use('/', bookController)

@@ -19,6 +19,7 @@ class BookStore {
 
   update (book) {
     this.books.set(book.id, book)
+    return this.books.get(book.id)
   }
 
   remove (id) {

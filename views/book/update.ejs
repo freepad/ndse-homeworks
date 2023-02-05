@@ -1,6 +1,5 @@
 <%- include('../layouts/layoutStart.ejs') %>
-<form action="/api/books/<%= book.id %>" method="POST">
-    <input type="hidden" name="_method" value="put" />
+<form action="/api/books/<%= book.id %>?_method=put" method="POST">
     <input type="hidden" name="id" value="<%= book.id %>" />
 
     <h3>Просмотр книги</h3>

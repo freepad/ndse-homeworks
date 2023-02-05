@@ -1,15 +1,11 @@
 const { router } = require('./bookController.js')
 const { repository: bookRepository } = require('./bookRepository.js')
 const { model: Book } = require('./bookModel.js')
-const { faker } = require('@faker-js/faker')
+const { books } = require('./bookFixture')
 
-for (const _ of Array.from({ length: 10 })) { // eslint-disable-line no-unused-vars
-  const book = new Book({
-    title: faker.random.words(2),
-    authors: faker.name.fullName(),
-    description: faker.random.words(10)
-  })
-  bookRepository.add(book)
+for (const book of books) { // eslint-disable-line no-unused-vars
+  const bookModel = new Book(book)
+  bookRepository.add(bookModel)
 }
 
 module.exports = {
